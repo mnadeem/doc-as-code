@@ -52,4 +52,5 @@ TODO
 
 ## Mark down websites
 
-TODO
+* [SAP Jenkins-library](https://sap.github.io/jenkins-library/){target=_blank}
+* [mkdocs-material](https://squidfunk.github.io/mkdocs-material){target=_blank}

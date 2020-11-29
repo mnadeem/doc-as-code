@@ -27,3 +27,82 @@ mkdocs gh-deploy
     INFO    -  Copying 'E:\mkdocs\doc-as-code\site' to 'gh-pages' branch and pushing to GitHub.
     INFO    -  Your documentation should shortly be available at: https://mnadeem.github.io/doc-as-code/
     ```
+
+## Automatically
+
+### Github Actions ⚙️
+
+Using [GitHub Actions](https://github.com/features/actions) you can automate the deployment of your project documentation. At the root of your repository, create a new GitHub Actions workflow, e.g. `.github/workflows/ci.yml`, and copy and paste the following contents:  👇
+
+```yaml
+name: ci
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs-material
+      - run: mkdocs gh-deploy --force
+```
+
+### Jenkinsfile ⚙️
+
+ Use the following jenkinsfile 👇
+
+```pipeline
+pipeline {
+  agent { label 'docker-mkdocs-slave' }
+  environment {
+    ORG = 'Your ORG'  // This should be CHANGED
+    REPO = 'Your Repo' // This should be CHANGED
+    CREDENTIALS_ID = '{{JenkinsCredentialId}}'  // This should be CHANGED
+
+    MKDOCS_VERSION = '1.0.4'
+    LC_ALL='en_US.utf-8'
+    LANG='en_US.utf-8'
+  }
+  stages {
+    stage('Build & Deploy Docs') {
+      when { branch 'master' }
+      steps {
+        withCredentials([usernamePassword(credentialsId: "$env.CREDENTIALS_ID", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+          sh """
+            . /etc/profile.d/jenkins.sh
+            git config --global user.name "${USERNAME}"
+            git remote set-url origin https://${USERNAME}:${PASSWORD}@github.com/${env.ORG}/${env.REPO}.git
+            export GIT_USER=${USERNAME}:${PASSWORD}
+            export GITHUB_HOST=github.com
+            mkdocs gh-deploy --force
+          """
+        }
+      }
+    }
+  }
+}
+```
+
+### GitLab Pages ⚙️
+
+If you're hosting your code on GitLab, deploying to [GitLab Pages](https://gitlab.com/pages) can be done by using the [GitLab CI](https://docs.gitlab.com/ee/ci/) task runner. At the root of your repository, create a task definition named `.gitlab-ci.yml` and copy and paste the following contents:  👇
+
+```yaml
+image: python:latest
+pages:
+  stage: deploy
+  only:
+    - master
+  script:
+    - pip install mkdocs-material
+    - mkdocs build --site-dir public
+  artifacts:
+    paths:
+      - public
+
+```
