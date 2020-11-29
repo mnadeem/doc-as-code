@@ -19,7 +19,7 @@ theme:
 #  feature:
 #    tabs: true
   custom_dir: 'theme'
-  #favicon: img/favicon.ico
+  favicon: img/favicon.ico
   #logo: img/logo.png
   icon:
     logo: material/file-document
