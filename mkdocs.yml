@@ -1,0 +1,77 @@
+site_name: 'doc-as-code'
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Document As Code: getting-started/document-as-code.md
+    - Creating Pages: getting-started/creating-pages.md
+    - Creating Diagrams: getting-started/creating-diagrams.md
+
+repo_name: 'doc-as-code'
+repo_url: 'https://github.com/mnadeem/doc-as-code'
+edit_uri: 'blob/master/docs'
+copyright: 'Copyright &copy; 2020 App'
+
+theme:
+  name: material
+  palette:
+    primary: 'green'
+    accent: 'green'
+#  feature:
+#    tabs: true
+  custom_dir: 'theme'
+  #favicon: img/favicon.ico
+  #logo: img/logo.png
+  font:
+    text: Arial
+    code: Roboto Mono
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/mnadeem'
+
+extra_css:
+  - styles/app-theme.css
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
+     
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tables.js
+  - https://unpkg.com/mermaid@8.8.3/dist/mermaid.min.js
+
+markdown_extensions:
+  - meta
+  - toc:
+      permalink: true
+  - admonition
+  - footnotes
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - attr_list
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.tabbed
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.snippets
+  - pymdownx.progressbar
+  - codehilite:
+      linenums: true
+
