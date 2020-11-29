@@ -6,7 +6,7 @@ authors:
 date: 2020-11-25
 ---
 
-## Get Started
+## Get Started 1️⃣
 
 There are [many tools](https://www.markdownguide.org/tools/){target=_blank} to write documentation, most of them center around writing [markdown](https://www.markdownguide.org/){target=_blank} files which eventually gets converted to HTML pages
 
@@ -18,7 +18,7 @@ Some of the famous ones are
 
 
 
-## Why Document As Code
+## Why Document As Code 2️⃣
 
 1. Since it is just markdown you don't have to worry about another decommission and later migration
 2. It follows the organization principle of reveal by policy and hide by intension when it comes to Documentation, it encourages learning and sharing
@@ -33,13 +33,13 @@ Some of the famous ones are
 12. Full History maintained in VCS (github) who changed what and when?
 
 
-## Pain Points
+## Pain Points 3️⃣
 
 1. If you don't like to code, you may not like `document as code`, we will have to wait for sophisticated editors
 2. It would take some time to reflect the changes on your site, even if you have the pipeline setup.
 3. It requires some intelligence to get started. Not that intuitive as Confluence
 
-## Comparing
+## Comparing 4️⃣
 
 ### Teams
 
@@ -50,7 +50,7 @@ TODO
 TODO
 
 
-## Mark down websites
+## Mark down websites 5️⃣
 
 * [SAP Jenkins-library](https://sap.github.io/jenkins-library/){target=_blank}
 * [mkdocs-material](https://squidfunk.github.io/mkdocs-material){target=_blank}
