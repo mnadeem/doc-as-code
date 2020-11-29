@@ -45,16 +45,5 @@ Your repository will resemble the directory structure here:
         ...       # Other directories with Markdown pages
 
 ## Deployment
-If you host the site with GitHub Pages then you do not need any other type of infrastructure other than your GitHub repository. MkDocs will build your `master/main` branch into a static website that will be pushed to the `gh-pages` branch and your changes are live! You can manually redeploy or configure automation to redeploy with every change to `master/main`. 
 
-### Manually
-To manually redeploy your documentation changes:
-
-```zsh
-mkdocs gh-deploy
-```
-
-This will rebuild your `master/main` branch and then push the built website to the `gh-pages` branch.
-
-### Automatically
-You can also use Jenkins to continuously redeploy your documentation changes. See [this page](docs/getting-started/deploying.md) for more details.
+Refer [this](https://mnadeem.github.io/doc-as-code/getting-started/deploying/) for more deployments.
