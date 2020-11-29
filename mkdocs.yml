@@ -6,7 +6,7 @@ nav:
     - Creating Pages: getting-started/creating-pages.md
     - Creating Diagrams: getting-started/creating-diagrams.md
 
-repo_name: 'doc-as-code'
+repo_name: 'github/doc-as-code'
 repo_url: 'https://github.com/mnadeem/doc-as-code'
 edit_uri: 'blob/master/docs'
 copyright: 'Copyright &copy; 2020 App'
@@ -21,6 +21,8 @@ theme:
   custom_dir: 'theme'
   #favicon: img/favicon.ico
   #logo: img/logo.png
+  icon:
+    logo: material/file-document
   font:
     text: Arial
     code: Roboto Mono
@@ -29,6 +31,7 @@ extra:
   social:
     - type: 'github'
       link: 'https://github.com/mnadeem'
+      icon: fontawesome/brands/github-alt
 
 extra_css:
   - styles/app-theme.css
