@@ -54,7 +54,19 @@ jobs:
 
 ### Jenkinsfile ⚙️
 
- Use the following jenkinsfile 👇
+ If you have the following infrastructure
+
+* Jenkins Instance
+* Docker agent where mkdocs is installed.
+* Jenkins pipleline infrastructure
+
+Further do the following 👇
+
+* Creating a Jenkins job (if you dont have organization plugin)
+* Adding github webhook (if you dont have organization plugin)
+* Adding Credentials to Jenkins instance
+  
+ Then Use the following jenkinsfile 👇
 
 ```pipeline
 pipeline {
@@ -87,6 +99,7 @@ pipeline {
   }
 }
 ```
+
 
 ### GitLab Pages ⚙️
 
