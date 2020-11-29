@@ -324,7 +324,7 @@ See [this](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){t
 
     ```
     !!! question "question"
-        This is an example admonition box. 
+        This is an question admonition box. 
     ```
 
 #### Failure 
@@ -333,13 +333,13 @@ See [this](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){t
 === "Output"
 
     !!! failure "failure"
-        This is an example admonition box. 
+        This is an failure admonition box. 
 
 === "Markdown"
 
     ```
     !!! failure "failure"
-        This is an example admonition box. 
+        This is an failure admonition box. 
     ```
 
 #### Danger 
@@ -348,13 +348,13 @@ See [this](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){t
 === "Output"
 
     !!! danger "danger"
-        This is an example admonition box. 
+        This is an danger admonition box. 
 
 === "Markdown"
 
     ```
     !!! danger "danger"
-        This is an example admonition box. 
+        This is an danger admonition box. 
     ```
 
 #### Bug 
@@ -363,13 +363,28 @@ See [this](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){t
 === "Output"
 
     !!! bug "bug"
-        This is an example admonition box. 
+        This is an bug admonition box. 
 
 === "Markdown"
 
     ```
     !!! bug "bug"
-        This is an example admonition box. 
+        This is an bug admonition box. 
+    ```
+
+#### Abstract 
+
+
+=== "Output"
+
+    !!! abstract "abstract"
+        This is an abstract admonition box. 
+
+=== "Markdown"
+
+    ```
+    !!! abstract "abstract"
+        This is an abstract admonition box. 
     ```
 
 ### Details
@@ -409,6 +424,9 @@ Refer [this](https://facelessuser.github.io/pymdown-extensions/extensions/detail
 
     ??? bug classes
         Content.
+    
+    ??? abstract classes
+        Content.
 
 === "Markdown"
 
@@ -444,6 +462,9 @@ Refer [this](https://facelessuser.github.io/pymdown-extensions/extensions/detail
              Content.
 
         ??? bug classes
+            Content.
+        
+        ??? abstract classes
             Content.
     ```
 

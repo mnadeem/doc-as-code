@@ -5,6 +5,7 @@ nav:
     - Document As Code: getting-started/document-as-code.md
     - Creating Pages: getting-started/creating-pages.md
     - Creating Diagrams: getting-started/creating-diagrams.md
+    - Deploying: getting-started/deploying.md
 
 repo_name: 'github/doc-as-code'
 repo_url: 'https://github.com/mnadeem/doc-as-code'
