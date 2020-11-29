@@ -1,6 +1,49 @@
-# Welcome to MkDocs
+# Document as Code
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Getting Started
+
+### Prerequisites
+In order to run your MkDocs page locally, you'll need Python installed on your machine, as well as the Python package manager, pip. You can check if you have these already installed from the command line:
+
+```zsh
+python --version
+pip --version
+```
+
+Install the `mkdocs` package using pip, as well as other dependencies, such as the theme this template uses:
+
+```zsh
+pip install mkdocs mkdocs-material
+```
+
+### Development
+To start working on your documentation locally, you will need to clone this repo:
+
+```zsh
+git clone https://github.com/mnadeem/doc-as-code.git
+cd doc-as-code
+```
+
+To start up the server, run this command:
+
+```zsh
+mkdocs serve
+```
+
+Open http://127.0.0.1:8000 in a browser to see the documentation page you have created! 🎉 
+
+## Project layout
+Your repository will resemble the directory structure here: 
+
+    mkdocs.yml    # The configuration file
+    docs/
+        index.md  # The documentation homepage
+        img/      # Image directory
+        ...       # Other directories with Markdown pages
+
+## Deployment
+
+Refer [**this**](getting-started/deploying.md) for more details.
 
 ## Commands
 
@@ -10,21 +53,3 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 * `mkdocs -h` - Print help message and exit.
 * `mkdocs gh-deploy --force` - builds the docs and pushes the content to `gh-pages` branch, for more details refer [**this**](https://www.mkdocs.org/user-guide/deploying-your-docs/)
 
-
-??? info "mkdocs gh-deploy"            
-    
-    ```
-      E:\mkdocs\doc-as-code>mkdocs gh-deploy --force
-      INFO    -  Cleaning site directory
-      INFO    -  Building documentation to directory: E:\mkdocs\doc-as-code\site
-      INFO    -  Documentation built in 1.44 seconds
-      INFO    -  Copying 'E:\mkdocs\doc-as-code\site' to 'gh-pages' branch and pushing to GitHub.
-      INFO    -  Your documentation should shortly be available at: https://mnadeem.github.io/doc-as-code/
-    ```
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
