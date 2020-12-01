@@ -52,6 +52,8 @@ jobs:
       - run: mkdocs gh-deploy --force
 ```
 
+![](../img/deploying/github-actions.png)
+
 ### Jenkinsfile ⚙️
 
  If you have the following infrastructure
