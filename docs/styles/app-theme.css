@@ -1,26 +1,146 @@
-[data-md-color-primary="app-orange"] .md-nav__source {
-    background-color: #C25608;
+/*start Pillar style*/
+.pillarwrapper {
+  display: flex;
+  padding: 20px 20px 0px 20px;
 }
 
-[data-md-color-primary="app-orange"] .md-header {
-    background-color: #C25608;
+.pillarwrapper > div {
+  flex-grow: 1;
+  padding: 20px 20px 0px 20px;
+  height:auto;
+  overflow:hidden;
+  transition: ease-in-out 200ms;
+ /*box-shadow: 0.05rem 0.05rem 0.075rem 0.075rem gainsboro; */
+  box-shadow: 0px 10px 10px rgba(30, 30, 30, 0.08);
+  /*background: linear-gradient(to right bottom, #f7fafc, #fff);*/
+  background-color: #ffffff;
+  border-collapse: collapse;
+  cursor: default; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
 }
 
-[data-md-color-primary="app-orange"] .md-tabs {
-    background-color: #C25608;
+.pillarwrapper > div:first-of-type { margin-right:10px }
+.pillarwrapper > div:nth-of-type(2) { margin-right:10px }
+.pillarwrapper > div:nth-of-type(3) {  }
+
+.pillarwrapper > h2 { margin-top:0 margin-bottom:0 }
+
+.pillarwrapper > div:hover {
+  box-shadow: 0px 10px 20px rgba(30, 30, 30, 0.16);
 }
 
-[data-md-color-primary="app-grey"] .md-nav__source {
-    background-color: #434448;
+.pillarcard {
+padding-bottom:0px;
+width:33vw;	
+}	
+.pillarcard img {
+opacity: 0.8;
+transition: ease-in-out 200ms;	
+}
+.pillarcard:hover img {
+opacity: 1.0;
+}
+/*end Pillar style*/
+
+/*    */
+.carousel_wrapper {
+  position: relative;
+  width: 320px;
+  height: 300px;
+  margin: 100px auto 0 auto;
+  padding: 5px;
+  perspective: 1000px;
 }
 
-[data-md-color-primary="app-grey"] .md-header {
-    background-color: #434448;
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(-360deg) translateZ(-412px); /* add reverse transformation from the slides */
+  animation: swirl 80s steps(10000, end) infinite; /* run `swirl` animation (defined at end of CSS) infitely, with animation 
+ lasting 40 seconds, and 10,000 steps between the FROM and TO values in the animation for a smooth rotation */
 }
 
-[data-md-color-primary="app-grey"] .md-tabs {
-    background-color: #434448;
+.slide {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 300px;
+  height: 187px;
 }
+
+.slide img {
+  width: 280px;
+  height: 175px;
+  border: 3px inset rgba(0, 255, 34, 0.9);
+  box-shadow: 0 0 10px 1px rgba(0, 255, 34, 0.9);
+}
+
+
+/*
+9 Slides total: 360 Degrees (full circle) --> 360/9 = 40 --> our increment for rotation
+Some math. Consider how the carousel will be set up. It's going to be a 3D circle, like an orbit. 
+The orientation will be such that it would be like setting a ring down on a table, then bending down and looking at the ring head on from the edge of the table. The main "front" image will be entirely front-facing. The other images will be rotated slightly to make a full circle. You could sketch this out in 2D from a bird's eye view, and you'd end up with a picture like the following:
+https://cl.ly/image/2P3E1U0W0c29
+Each triangle/piece would be a slide, hence 9 pieces. 
+That being said, let's do some calculations, but we'll use the dimensions of our elements rather than those in the picture.
+So, we're rotating all the slides in 40º increments relative to each other, because 360º makes a full circle, and we have 9 elements: 360/9 = 40
+In the picture above, we want to find the radius of the circle (which isn't exactly a circle because it's made up of triangles). 
+So we can cut each triangle in half and solve for `r` (radius). We can solve for `r` using some geometry and our own elements' dimensions. 
+The width of the slides is 300px. We're going to split those triangles in half and use the TANGENT function in geometry/trigonemty to solve for `r`. And since we're splitting each of the 9 triangles (the slides) in half for this, we need to account for the fact that our key angle is now going to be 20º and not 40º. We can solve for `r` by taking our smaller triangles' width (150px) and dividing by the tangent of 20º (in degrees, not radians). So:
+            150
+   r =  -----------
+          tan(20º)
+Here's a screenshot of me doing the calculations in JavaScript, right in the browser console!
+Math things: https://cl.ly/image/1t0j1V2Y2l2Z
+So, `r` is (about) 412px long! This means we need to TRANSLATE the slides in the Z 3-dimensional plane by 412px. This should be done AFTER the rotateY transformation.
+*/
+
+.slide.one {
+  transform: rotateY(0deg) translateZ(412px);
+}
+.slide.two {
+  transform: rotateY(40deg) translateZ(412px);
+}
+.slide.three {
+  transform: rotateY(80deg) translateZ(412px);
+}
+.slide.four {
+  transform: rotateY(120deg) translateZ(412px);
+}
+.slide.five {
+  transform: rotateY(160deg) translateZ(412px);
+}
+.slide.six {
+  transform: rotateY(200deg) translateZ(412px);
+}
+.slide.seven {
+  transform: rotateY(240deg) translateZ(412px);
+}
+.slide.eight {
+  transform: rotateY(280deg) translateZ(412px);
+}
+.slide.nine {
+  transform: rotateY(320deg) translateZ(412px);
+}
+
+/*
+CSS3 ANIMATION
+-------------------
+Simply rotates the carousel around the Y axis by using rotateY and starting at initial value, -360º, and going to final value 0º, 
+then resetting.
+*/
+
+@keyframes swirl {   
+  from {
+    transform: rotateY(-360deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+} 
+/*  */
+
 
 /* Progress Bars */
 .md-typeset 

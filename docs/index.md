@@ -1,55 +1,113 @@
-# Document as Code
+<style> 
 
-## Getting Started
+@media only screen and (min-width: 60em) { .md-sidebar--secondary { display: none; } .md-content { margin-right: 0; margin-left: 0; padding:0; margin-top:0;max-width: 100%; } 
+@media only screen and (min-width: 76.1875em) { .md-sidebar--primary { display: none; } .md-content { margin-right: 0; margin-left: 0; margin-top: 0; padding:0;max-width: 100%;} } 
+.md-content__inner {margin-top: 0; padding-top: 0}
 
-### Prerequisites
-In order to run your MkDocs page locally, you'll need Python installed on your machine, as well as the Python package manager, pip. You can check if you have these already installed from the command line:
+</style>
 
-```zsh
-python --version
-pip --version
-```
 
-Install the `mkdocs` package using pip, as well as other dependencies, such as the theme this template uses:
+<h1 style="padding:0 margin-top:0px"> </h1> 
 
-```zsh
-pip install mkdocs mkdocs-material
-```
+ <div align="center" >
+    <img src="img/scene-svgrepo-com.svg" width="200px"/>
+</div>
 
-### Development
-To start working on your documentation locally, you will need to clone this repo:
+<div class="pillarwrapper">
 
-```zsh
-git clone https://github.com/mnadeem/doc-as-code.git
-cd doc-as-code
-```
+ <div align="center" class="pillarcard">
 
-To start up the server, run this command:
+  <img src="img/vision-svgrepo-com.svg" width="80px" />  
+  <h3 style="margin-top:0px">Vision</h3>
+  
+  <p style="margin-bottom: 0px">  
+    Some cometry
+  </p>
+  
+  <hr style="margin-bottom: 0px margin-top: 0px" />
+ 
 
-```zsh
-mkdocs serve
-```
+  <h3 style="margin-top: 0px">Some Other heading</h3>
 
-Open http://127.0.0.1:8000 in a browser to see the documentation page you have created! 🎉 
+  <p>Some big comentery</p>
+  
+  <div class="card-btn-container">
+   <a href="http://127.0.0.1:8000/">
+   <span>Learn More &rarr; </span>
+   </a>
+  </div>
 
-## Project layout
-Your repository will resemble the directory structure here: 
+ </div>
 
-    mkdocs.yml    # The configuration file
-    docs/
-        index.md  # The documentation homepage
-        img/      # Image directory
-        ...       # Other directories with Markdown pages
 
-## Deployment
+ <div align="center" class="pillarcard container">
 
-Refer [**this**](getting-started/deploying.md) for more details.
+  <img src="img/goal-svgrepo-com.svg" width="80px" />  
+  <h3 style="margin-top:0px">Goal</h3>
+  
+  <p style="margin-bottom: 0px">  
+    Some cometry
+  </p>
+  
+  <hr style="margin-bottom: 0px margin-top: 0px" />
+ 
 
-## Commands
+  <h3 style="margin-top: 0px">Some Other heading</h3>
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-* `mkdocs gh-deploy --force` - builds the docs and pushes the content to `gh-pages` branch, for more details refer [**this**](https://www.mkdocs.org/user-guide/deploying-your-docs/)
+  <p>Blah blah blah</p>
+  
+  <div class="card-btn-container">
+   <a href="http://127.0.0.1:8000/">
+   <span>Learn More &rarr; </span>
+   </a>
+  </div>
 
+ </div>
+
+
+</div>
+
+
+<div class="carousel_wrapper">
+
+ <div  class="carousel">
+    
+    <div class="slide one">
+        <img src="img/vision-svgrepo-com.svg" width="80px" />
+        <div class="card-btn-container">
+            <a href="http://127.0.0.1:8000/">
+            <span>Learn More &rarr; </span>
+            </a>
+        </div>
+    </div>
+
+     <div class="slide two">
+       <img src="img/goal-svgrepo-com.svg" width="80px" />
+       <div class="card-btn-container">
+            <a href="http://127.0.0.1:8000/">
+            <span>Learn More &rarr; </span>
+            </a>
+        </div>
+    </div>
+
+      <div class="slide three">
+       <img src="img/goal-svgrepo-com.svg" width="80px" />
+       <div class="card-btn-container">
+            <a href="http://127.0.0.1:8000/">
+            <span>Learn More &rarr; </span>
+            </a>
+        </div>
+    </div>
+
+      <div class="slide four">
+       <img src="img/goal-svgrepo-com.svg" width="80px" />
+       <div class="card-btn-container">
+            <a href="http://127.0.0.1:8000/">
+            <span>Learn More &rarr; </span>
+            </a>
+        </div>
+    </div>
+
+ </div>
+
+</div>

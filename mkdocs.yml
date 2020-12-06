@@ -2,6 +2,7 @@ site_name: 'doc-as-code'
 nav:
   - Home: index.md
   - Getting Started:
+    - Home: getting-started/home.md
     - Document As Code: getting-started/document-as-code.md
     - Creating Pages: getting-started/creating-pages.md
     - Creating Diagrams: getting-started/creating-diagrams.md
