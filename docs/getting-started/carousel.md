@@ -13,7 +13,7 @@ date: 2020-12-7
  <div  class="carousel">
     
     <div class="slide one">
-        <img src="/img/vision-svgrepo-com.svg" width="80px" />
+        <img src="../../img/vision-svgrepo-com.svg" width="80px" />
         <div class="card-btn-container">
             <a href="/">
             <span>Learn More &rarr; </span>
