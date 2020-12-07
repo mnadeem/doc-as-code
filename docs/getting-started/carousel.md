@@ -22,7 +22,7 @@ date: 2020-12-7
     </div>
 
      <div class="slide two">
-       <img src="../img/goal-svgrepo-com.svg" width="80px" />
+       <img src="../../img/goal-svgrepo-com.svg" width="80px" />
        <div class="card-btn-container">
             <a href="/">
             <span>Learn More &rarr; </span>
@@ -31,7 +31,7 @@ date: 2020-12-7
     </div>
 
       <div class="slide three">
-       <img src="../img/goal-svgrepo-com.svg" width="80px" />
+       <img src="../../img/goal-svgrepo-com.svg" width="80px" />
        <div class="card-btn-container">
             <a href="/">
             <span>Learn More &rarr; </span>
@@ -40,7 +40,7 @@ date: 2020-12-7
     </div>
 
       <div class="slide four">
-       <img src="../img/goal-svgrepo-com.svg" width="80px" />
+       <img src="../../img/goal-svgrepo-com.svg" width="80px" />
        <div class="card-btn-container">
             <a href="/">
             <span>Learn More &rarr; </span>
