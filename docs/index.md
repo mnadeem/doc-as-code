@@ -63,7 +63,7 @@
   <p>Blah blah blah</p>
   
   <div class="card-btn-container">
-   <a href="http://127.0.0.1:8000/">
+   <a href="/">
    <span>Learn More &rarr; </span>
    </a>
   </div>
