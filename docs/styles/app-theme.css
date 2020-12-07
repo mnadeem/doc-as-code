@@ -41,7 +41,7 @@ opacity: 1.0;
 }
 /*end Pillar style*/
 
-/*    */
+/* Carousel Start  */
 .carousel_wrapper {
   position: relative;
   width: 320px;
@@ -139,7 +139,7 @@ then resetting.
     transform: rotateY(0deg);
   }
 } 
-/*  */
+/* Carousel Start */
 
 
 /* Progress Bars */

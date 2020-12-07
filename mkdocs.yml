@@ -3,6 +3,8 @@ nav:
   - Home: index.md
   - Getting Started:
     - Home: getting-started/home.md
+    - Carousel: getting-started/carousel.md
+    - Hiding Secondary Sidebar: getting-started/hiding-secondary-sidebar.md
     - Document As Code: getting-started/document-as-code.md
     - Creating Pages: getting-started/creating-pages.md
     - Creating Diagrams: getting-started/creating-diagrams.md

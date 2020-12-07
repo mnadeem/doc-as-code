@@ -18,21 +18,27 @@
  <div align="center" class="pillarcard">
 
   <img src="img/vision-svgrepo-com.svg" width="80px" />  
-  <h3 style="margin-top:0px">Vision</h3>
+  <h3 style="margin-top:0px">Getting Started</h3>
   
   <p style="margin-bottom: 0px">  
-    Some cometry
+    Some Description
   </p>
+
+  <div class="card-btn-container">
+   <a href="getting-started/home/">
+   <span>Click here to Get Started &rarr; </span>
+   </a>
+  </div>
   
   <hr style="margin-bottom: 0px margin-top: 0px" />
  
 
-  <h3 style="margin-top: 0px">Some Other heading</h3>
+  <h3 style="margin-top: 0px">Carousel</h3>
 
-  <p>Some big comentery</p>
+  <p>Some big Description</p>
   
   <div class="card-btn-container">
-   <a href="http://127.0.0.1:8000/">
+   <a href="getting-started/carousel/">
    <span>Learn More &rarr; </span>
    </a>
   </div>
@@ -46,7 +52,7 @@
   <h3 style="margin-top:0px">Goal</h3>
   
   <p style="margin-bottom: 0px">  
-    Some cometry
+    Some Description
   </p>
   
   <hr style="margin-bottom: 0px margin-top: 0px" />
@@ -64,50 +70,5 @@
 
  </div>
 
-
-</div>
-
-
-<div class="carousel_wrapper">
-
- <div  class="carousel">
-    
-    <div class="slide one">
-        <img src="img/vision-svgrepo-com.svg" width="80px" />
-        <div class="card-btn-container">
-            <a href="http://127.0.0.1:8000/">
-            <span>Learn More &rarr; </span>
-            </a>
-        </div>
-    </div>
-
-     <div class="slide two">
-       <img src="img/goal-svgrepo-com.svg" width="80px" />
-       <div class="card-btn-container">
-            <a href="http://127.0.0.1:8000/">
-            <span>Learn More &rarr; </span>
-            </a>
-        </div>
-    </div>
-
-      <div class="slide three">
-       <img src="img/goal-svgrepo-com.svg" width="80px" />
-       <div class="card-btn-container">
-            <a href="http://127.0.0.1:8000/">
-            <span>Learn More &rarr; </span>
-            </a>
-        </div>
-    </div>
-
-      <div class="slide four">
-       <img src="img/goal-svgrepo-com.svg" width="80px" />
-       <div class="card-btn-container">
-            <a href="http://127.0.0.1:8000/">
-            <span>Learn More &rarr; </span>
-            </a>
-        </div>
-    </div>
-
- </div>
 
 </div>
