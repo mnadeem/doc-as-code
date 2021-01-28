@@ -55,3 +55,4 @@ TODO
 * [SAP Jenkins-library](https://sap.github.io/jenkins-library/){target=_blank}
 * [mkdocs-material](https://squidfunk.github.io/mkdocs-material){target=_blank}
 * [V1 Engineering Documentation](https://docs.v1engineering.com/){target=_blank}
+* [Awesome Kubernetes](https://redhatspain.com/){target=_blank}
