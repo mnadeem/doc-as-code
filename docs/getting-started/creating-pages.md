@@ -650,8 +650,8 @@ Refer [this](https://facelessuser.github.io/pymdown-extensions/extensions/progre
 ### Emojis 😃
 * [Emojis](https://emojipedia.org/nature/){target=_blank}
 * [Github Markup Emojis](https://gist.github.com/rxaviers/7360908){target=_blank}
-* [emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
-* http://www.i2symbol.com/symbols/style-digits
+* [emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
+* [style-digits](http://www.i2symbol.com/symbols/style-digits)
 
 ### Badges 📛
 * [Badges](https://shields.io/){target=_blank}
