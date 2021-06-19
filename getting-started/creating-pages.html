@@ -1,0 +1,1907 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Demonstrates how wiki pages can be created">
+      
+      
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>Creating Wiki pages using Mark down - doc-as-code</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Arial";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../styles/app-theme.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@8.5.1/dist/mermaid.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-basics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="doc-as-code" class="md-header__button md-logo" aria-label="doc-as-code" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m9 16v-2H6v2h9m3-4v-2H6v2h12z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            doc-as-code
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Creating Wiki pages using Mark down
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/mnadeem/doc-as-code/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    github/doc-as-code
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="doc-as-code" class="md-nav__button md-logo" aria-label="doc-as-code" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m9 16v-2H6v2h9m3-4v-2H6v2h12z"/></svg>
+
+    </a>
+    doc-as-code
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/mnadeem/doc-as-code/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    github/doc-as-code
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Getting Started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="home.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="carousel.html" class="md-nav__link">
+        Carousel
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hiding-secondary-sidebar.html" class="md-nav__link">
+        Hiding Secondary Sidebar
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="document-as-code.html" class="md-nav__link">
+        Document As Code
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Creating Pages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="creating-pages.html" class="md-nav__link md-nav__link--active">
+        Creating Pages
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-basics" class="md-nav__link">
+    1️⃣ Basics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-components" class="md-nav__link">
+    2️⃣ Components
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabs" class="md-nav__link">
+    Tabs
+  </a>
+  
+    <nav class="md-nav" aria-label="Tabs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#markup" class="md-nav__link">
+    Markup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    Images
+  </a>
+  
+    <nav class="md-nav" aria-label="Images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" class="md-nav__link">
+    Example #1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2" class="md-nav__link">
+    Example #2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-lists" class="md-nav__link">
+    Task Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#call-outs" class="md-nav__link">
+    Call outs
+  </a>
+  
+    <nav class="md-nav" aria-label="Call outs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success" class="md-nav__link">
+    Success
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    Note
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#danger" class="md-nav__link">
+    Danger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important" class="md-nav__link">
+    Important
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip" class="md-nav__link">
+    Tip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warning" class="md-nav__link">
+    Warning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error" class="md-nav__link">
+    Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info" class="md-nav__link">
+    Info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quote" class="md-nav__link">
+    Quote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question" class="md-nav__link">
+    Question
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure" class="md-nav__link">
+    Failure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#danger_1" class="md-nav__link">
+    Danger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug" class="md-nav__link">
+    Bug
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    Details
+  </a>
+  
+    <nav class="md-nav" aria-label="Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1_1" class="md-nav__link">
+    Example #1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2_1" class="md-nav__link">
+    Example #2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3" class="md-nav__link">
+    Example #3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progress-bar" class="md-nav__link">
+    Progress Bar
+  </a>
+  
+    <nav class="md-nav" aria-label="Progress Bar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1_2" class="md-nav__link">
+    Example #1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2_2" class="md-nav__link">
+    Example #2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3_1" class="md-nav__link">
+    Example #3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4" class="md-nav__link">
+    Example #4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5" class="md-nav__link">
+    Example #5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-references" class="md-nav__link">
+    3️⃣ References
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#markdown" class="md-nav__link">
+    Markdown 💪
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emojis" class="md-nav__link">
+    Emojis 😃
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#badges" class="md-nav__link">
+    Badges 📛
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawings" class="md-nav__link">
+    Drawings ✒️
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#others" class="md-nav__link">
+    Others 📒
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="creating-diagrams.html" class="md-nav__link">
+        Creating Diagrams
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deploying.html" class="md-nav__link">
+        Deploying
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-stack/techstack.html" class="md-nav__link">
+        Tech Stack
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-basics" class="md-nav__link">
+    1️⃣ Basics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-components" class="md-nav__link">
+    2️⃣ Components
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabs" class="md-nav__link">
+    Tabs
+  </a>
+  
+    <nav class="md-nav" aria-label="Tabs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#markup" class="md-nav__link">
+    Markup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    Images
+  </a>
+  
+    <nav class="md-nav" aria-label="Images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" class="md-nav__link">
+    Example #1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2" class="md-nav__link">
+    Example #2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-lists" class="md-nav__link">
+    Task Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#call-outs" class="md-nav__link">
+    Call outs
+  </a>
+  
+    <nav class="md-nav" aria-label="Call outs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success" class="md-nav__link">
+    Success
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    Note
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#danger" class="md-nav__link">
+    Danger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important" class="md-nav__link">
+    Important
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip" class="md-nav__link">
+    Tip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warning" class="md-nav__link">
+    Warning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error" class="md-nav__link">
+    Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info" class="md-nav__link">
+    Info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quote" class="md-nav__link">
+    Quote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question" class="md-nav__link">
+    Question
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure" class="md-nav__link">
+    Failure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#danger_1" class="md-nav__link">
+    Danger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug" class="md-nav__link">
+    Bug
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    Details
+  </a>
+  
+    <nav class="md-nav" aria-label="Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1_1" class="md-nav__link">
+    Example #1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2_1" class="md-nav__link">
+    Example #2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3" class="md-nav__link">
+    Example #3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progress-bar" class="md-nav__link">
+    Progress Bar
+  </a>
+  
+    <nav class="md-nav" aria-label="Progress Bar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1_2" class="md-nav__link">
+    Example #1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2_2" class="md-nav__link">
+    Example #2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3_1" class="md-nav__link">
+    Example #3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4" class="md-nav__link">
+    Example #4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5" class="md-nav__link">
+    Example #5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-references" class="md-nav__link">
+    3️⃣ References
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#markdown" class="md-nav__link">
+    Markdown 💪
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emojis" class="md-nav__link">
+    Emojis 😃
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#badges" class="md-nav__link">
+    Badges 📛
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawings" class="md-nav__link">
+    Drawings ✒️
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#others" class="md-nav__link">
+    Others 📒
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mnadeem/doc-as-code/blob/master/docs/getting-started/creating-pages.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Creating Pages</h1>
+                
+                <h2 id="1-basics">1️⃣ Basics<a class="headerlink" href="#1-basics" title="Permanent link">&para;</a></h2>
+<p>Get started with <a href="https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/basic-writing-and-formatting-syntax" target="_blank">Markdown basics</a> then move on to <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">advance concepts</a> .</p>
+<p>Download the <a href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf">cheat sheet</a></p>
+<p>Move on to learning <a href="https://www.mkdocs.org/user-guide/writing-your-docs/#linking-to-pages" target="_blank">linking pages</a></p>
+<h2 id="2-components">2️⃣ Components<a class="headerlink" href="#2-components" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Note : Space place very critical role in Markdown.</p>
+</blockquote>
+<h3 id="tabs">Tabs<a class="headerlink" href="#tabs" title="Permanent link">&para;</a></h3>
+<p>Refer <a href="https://squidfunk.github.io/mkdocs-material/reference/content-tabs/" target="_blank">this</a> for more details.</p>
+<h4 id="markup">Markup<a class="headerlink" href="#markup" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>  === &quot;C&quot;
+
+    ``` c
+    #include &lt;stdio.h&gt;
+
+    int main(void) {
+      printf(&quot;Hello world!\n&quot;);
+      return 0;
+    }
+    ```
+
+  === &quot;C++&quot;
+
+    ``` c++
+    #include &lt;iostream&gt;
+
+    int main(void) {
+      std::cout &lt;&lt; &quot;Hello world!&quot; &lt;&lt; std::endl;
+      return 0;
+    }
+    ```
+</code></pre></div>
+<h4 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">C</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">C++</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello world!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h3>
+<p>Refer <a href="https://squidfunk.github.io/mkdocs-material/reference/data-tables/" target="_blank">this</a> for more details</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Output</label><div class="tabbed-content">
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7z"/></svg></span>     Fetch resource</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7z"/></svg></span> Update resource</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg></span>     Delete resource</td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>| Method      | Description                          |
+| ----------- | ------------------------------------ |
+| `GET`       | :material-check:     Fetch resource  |
+| `PUT`       | :material-check-all: Update resource |
+| `DELETE`    | :material-close:     Delete resource |
+</code></pre></div>
+</div>
+</div>
+<h3 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h3>
+<h4 id="example-1">Example #1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Output</label><div class="tabbed-content">
+<p><img align="left" alt="Placeholder" src="https://dummyimage.com/600x400/eee/aaa" /></p>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>   ![Placeholder](https://dummyimage.com/600x400/eee/aaa){: align=left }
+</code></pre></div>
+</div>
+</div>
+<h4 id="example-2">Example #2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Output</label><div class="tabbed-content">
+<p><img alt="" src="../img/Octocat.png" />   </p>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>   ![](../img/Octocat.png)
+</code></pre></div>
+</div>
+</div>
+<h3 id="task-lists">Task Lists<a class="headerlink" href="#task-lists" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Output</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> item 1<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> item A</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> item B
+    more text<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> item a</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> item b</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> item c</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> item C</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> item 2</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> item 3</li>
+</ul>
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>   - [X] item 1
+      * [X] item A
+      * [ ] item B
+          more text
+          + [x] item a
+          + [ ] item b
+          + [x] item c
+      * [X] item C
+  - [ ] item 2
+  - [ ] item 3
+</code></pre></div>
+</div>
+</div>
+<h3 id="call-outs">Call outs<a class="headerlink" href="#call-outs" title="Permanent link">&para;</a></h3>
+<p>See <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/" target="_blank">this</a> for more details.</p>
+<h4 id="success">Success<a class="headerlink" href="#success" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Output</label><div class="tabbed-content">
+<div class="admonition success">
+<p class="admonition-title">optional explicit title within double quotes</p>
+<p>Any number of other indented markdown elements.</p>
+<p>This is the second paragraph.</p>
+</div>
+</div>
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! success &quot;optional explicit title within double quotes&quot;
+Any number of other indented markdown elements.
+
+This is the second paragraph.
+</code></pre></div>
+</div>
+</div>
+<h4 id="note">Note<a class="headerlink" href="#note" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">Output</label><div class="tabbed-content">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You should note that the title will be automatically capitalized.h.</p>
+</div>
+</div>
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! note
+    You should note that the title will be automatically capitalized.
+</code></pre></div>
+</div>
+</div>
+<h4 id="danger">Danger<a class="headerlink" href="#danger" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">Output</label><div class="tabbed-content">
+<div class="admonition danger">
+<p class="admonition-title">Don't try this at home</p>
+<p>...</p>
+</div>
+</div>
+<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! danger &quot;Don&#39;t try this at home&quot;
+    ...
+</code></pre></div>
+</div>
+</div>
+<h4 id="important">Important<a class="headerlink" href="#important" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><label for="__tabbed_9_1">Output</label><div class="tabbed-content">
+<div class="admonition important">
+<p>This is important admonition box.</p>
+</div>
+</div>
+<input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><label for="__tabbed_9_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! important &quot;&quot;
+    This is important admonition box.
+</code></pre></div>
+</div>
+</div>
+<h4 id="tip">Tip<a class="headerlink" href="#tip" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><label for="__tabbed_10_1">Output</label><div class="tabbed-content">
+<div class="admonition tip">
+<p class="admonition-title">tip</p>
+<p>This is tip admonition box.  </p>
+</div>
+</div>
+<input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><label for="__tabbed_10_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! tip &quot;tip&quot;
+    This is tip admonition box.  
+</code></pre></div>
+</div>
+</div>
+<h4 id="warning">Warning<a class="headerlink" href="#warning" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><label for="__tabbed_11_1">Output</label><div class="tabbed-content">
+<div class="admonition warning">
+<p class="admonition-title">warning</p>
+<p>This is warning admonition box.</p>
+</div>
+</div>
+<input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><label for="__tabbed_11_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! warning &quot;warning&quot;
+    This is warning admonition box. 
+</code></pre></div>
+</div>
+</div>
+<h4 id="error">Error<a class="headerlink" href="#error" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><label for="__tabbed_12_1">Output</label><div class="tabbed-content">
+<div class="admonition error">
+<p class="admonition-title">error</p>
+<p>This is an error admonition box. </p>
+</div>
+</div>
+<input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><label for="__tabbed_12_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! error &quot;error&quot;
+    This is an error admonition box. 
+</code></pre></div>
+</div>
+</div>
+<h4 id="info">Info<a class="headerlink" href="#info" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><label for="__tabbed_13_1">Output</label><div class="tabbed-content">
+<div class="admonition info">
+<p class="admonition-title">info</p>
+<p>This is an info admonition box. </p>
+</div>
+</div>
+<input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><label for="__tabbed_13_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! info &quot;info&quot;
+    This is an info admonition box. 
+</code></pre></div>
+</div>
+</div>
+<h4 id="quote">Quote<a class="headerlink" href="#quote" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><label for="__tabbed_14_1">Output</label><div class="tabbed-content">
+<div class="admonition quote">
+<p class="admonition-title">quote </p>
+<p>This is an quote  admonition box. </p>
+</div>
+</div>
+<input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><label for="__tabbed_14_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! quote  &quot;quote &quot;
+    This is an quote admonition box. 
+</code></pre></div>
+</div>
+</div>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><label for="__tabbed_15_1">Output</label><div class="tabbed-content">
+<div class="admonition example">
+<p class="admonition-title">example</p>
+<p>This is an example admonition box. </p>
+</div>
+</div>
+<input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><label for="__tabbed_15_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! example &quot;example&quot;
+    This is an example admonition box. 
+</code></pre></div>
+</div>
+</div>
+<h4 id="question">Question<a class="headerlink" href="#question" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><label for="__tabbed_16_1">Output</label><div class="tabbed-content">
+<div class="admonition question">
+<p class="admonition-title">question</p>
+<p>This is an example admonition box. </p>
+</div>
+</div>
+<input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><label for="__tabbed_16_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! question &quot;question&quot;
+    This is an question admonition box. 
+</code></pre></div>
+</div>
+</div>
+<h4 id="failure">Failure<a class="headerlink" href="#failure" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><label for="__tabbed_17_1">Output</label><div class="tabbed-content">
+<div class="admonition failure">
+<p class="admonition-title">failure</p>
+<p>This is an failure admonition box. </p>
+</div>
+</div>
+<input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><label for="__tabbed_17_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! failure &quot;failure&quot;
+    This is an failure admonition box. 
+</code></pre></div>
+</div>
+</div>
+<h4 id="danger_1">Danger<a class="headerlink" href="#danger_1" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><label for="__tabbed_18_1">Output</label><div class="tabbed-content">
+<div class="admonition danger">
+<p class="admonition-title">danger</p>
+<p>This is an danger admonition box. </p>
+</div>
+</div>
+<input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><label for="__tabbed_18_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! danger &quot;danger&quot;
+    This is an danger admonition box. 
+</code></pre></div>
+</div>
+</div>
+<h4 id="bug">Bug<a class="headerlink" href="#bug" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><label for="__tabbed_19_1">Output</label><div class="tabbed-content">
+<div class="admonition bug">
+<p class="admonition-title">bug</p>
+<p>This is an bug admonition box. </p>
+</div>
+</div>
+<input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><label for="__tabbed_19_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! bug &quot;bug&quot;
+    This is an bug admonition box. 
+</code></pre></div>
+</div>
+</div>
+<h4 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><label for="__tabbed_20_1">Output</label><div class="tabbed-content">
+<div class="admonition abstract">
+<p class="admonition-title">abstract</p>
+<p>This is an abstract admonition box. </p>
+</div>
+</div>
+<input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><label for="__tabbed_20_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>!!! abstract &quot;abstract&quot;
+    This is an abstract admonition box. 
+</code></pre></div>
+</div>
+</div>
+<h3 id="details">Details<a class="headerlink" href="#details" title="Permanent link">&para;</a></h3>
+<p>Refer <a href="https://facelessuser.github.io/pymdown-extensions/extensions/details/" target="_blank">this</a> for more details</p>
+<h4 id="example-1_1">Example #1<a class="headerlink" href="#example-1_1" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><label for="__tabbed_21_1">Output</label><div class="tabbed-content">
+<details class="success"><summary>Success</summary><p>Content.</p>
+</details>
+<details class="warning classes"><summary>Warning</summary><p>Content.</p>
+</details>
+<details class="tip"><summary>Tip</summary><p>Content.</p>
+</details>
+<details class="note classes"><summary>Note</summary><p>Content.</p>
+</details>
+<details class="example classes"><summary>Example</summary><p>Content.</p>
+</details>
+<details class="quote classes"><summary>Quote</summary><p>Content.</p>
+</details>
+<details class="info classes"><summary>Info</summary><p>Content.</p>
+</details>
+<details class="question classes"><summary>Question</summary><p>Content.</p>
+</details>
+<details class="failure classes"><summary>Failure</summary><p>Content.</p>
+</details>
+<details class="bug classes"><summary>Bug</summary><p>Content.</p>
+</details>
+<details class="abstract classes"><summary>Abstract</summary><p>Content.</p>
+</details>
+</div>
+<input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><label for="__tabbed_21_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>    ??? success
+        Content.
+
+    ??? warning classes
+        Content.
+
+    ??? tip
+        Content.
+
+    ??? note classes
+        Content.
+
+    ??? success
+        Content.
+
+    ??? example classes
+        Content.
+
+    ??? quote classes
+        Content.
+
+    ??? info classes
+        Content.
+
+    ??? question classes
+        Content.
+
+     ??? failure classes
+         Content.
+
+    ??? bug classes
+        Content.
+
+    ??? abstract classes
+        Content.
+</code></pre></div>
+</div>
+</div>
+<h4 id="example-2_1">Example #2<a class="headerlink" href="#example-2_1" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><label for="__tabbed_22_1">Output</label><div class="tabbed-content">
+<details class="optional-class"><summary>Summary</summary><p>Here's some content.</p>
+</details>
+<details class="multiple optional-class"><summary>Summary</summary><p>Here's some content.</p>
+</details>
+</div>
+<input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><label for="__tabbed_22_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>    ??? optional-class &quot;Summary&quot;
+        optional-class: Here&#39;s some content.
+
+    ??? multiple optional-class &quot;Summary&quot;
+        multiple class: Here&#39;s some content. 
+</code></pre></div>
+</div>
+</div>
+<h4 id="example-3">Example #3<a class="headerlink" href="#example-3" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><label for="__tabbed_23_1">Output</label><div class="tabbed-content">
+<details class="note default expanded" open="open"><summary>Note</summary><p>Here's some content.</p>
+</details>
+</div>
+<input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><label for="__tabbed_23_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>    ???+ note default expanded
+         Here&#39;s some content. 
+</code></pre></div>
+</div>
+</div>
+<h3 id="progress-bar">Progress Bar<a class="headerlink" href="#progress-bar" title="Permanent link">&para;</a></h3>
+<p>Refer <a href="https://facelessuser.github.io/pymdown-extensions/extensions/progressbar/" target="_blank">this</a> for more details</p>
+<h4 id="example-1_2">Example #1<a class="headerlink" href="#example-1_2" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><label for="__tabbed_24_1">Output</label><div class="tabbed-content">
+<p>
+<div class="progress progress-0plus">
+<div class="progress-bar" style="width:0.00%">
+<p class="progress-label">0%</p>
+</div>
+</div>
+<div class="progress progress-0plus">
+<div class="progress-bar" style="width:5.00%">
+<p class="progress-label">5%</p>
+</div>
+</div>
+<div class="progress progress-20plus">
+<div class="progress-bar" style="width:25.00%">
+<p class="progress-label">25%</p>
+</div>
+</div>
+<div class="progress progress-40plus">
+<div class="progress-bar" style="width:45.00%">
+<p class="progress-label">45%</p>
+</div>
+</div>
+<div class="progress progress-60plus">
+<div class="progress-bar" style="width:65.00%">
+<p class="progress-label">65%</p>
+</div>
+</div>
+<div class="progress progress-80plus">
+<div class="progress-bar" style="width:85.00%">
+<p class="progress-label">85%</p>
+</div>
+</div>
+<div class="progress progress-100plus">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label">100%</p>
+</div>
+</div>
+</p>
+</div>
+<input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><label for="__tabbed_24_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>   [=0% &quot;0%&quot;]
+   [=5% &quot;5%&quot;]
+   [=25% &quot;25%&quot;]
+   [=45% &quot;45%&quot;]
+   [=65% &quot;65%&quot;]
+   [=85% &quot;85%&quot;]
+   [=100% &quot;100%&quot;] 
+</code></pre></div>
+</div>
+</div>
+<h4 id="example-2_2">Example #2<a class="headerlink" href="#example-2_2" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><label for="__tabbed_25_1">Output</label><div class="tabbed-content">
+<p>
+<div class="progress progress-0plus">
+<div class="progress-bar" style="width:10.00%">
+<p class="progress-label">10%</p>
+</div>
+</div>
+<div class="progress progress-0plus">
+<div class="progress-bar" style="width:5.00%">
+<p class="progress-label"></p>
+</div>
+</div>
+<div class="progress progress-20plus">
+<div class="progress-bar" style="width:25.00%">
+<p class="progress-label">More than 25%</p>
+</div>
+</div>
+<div class="progress progress-100plus">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label">All set</p>
+</div>
+</div>
+</p>
+</div>
+<input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><label for="__tabbed_25_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>   [=1/10 &quot;10%&quot;]
+   [=5%]
+   [=25% &quot;More than 25%&quot;]
+   [=100/100 &#39;All set&#39;] 
+</code></pre></div>
+</div>
+</div>
+<h4 id="example-3_1">Example #3<a class="headerlink" href="#example-3_1" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><label for="__tabbed_26_1">Output</label><div class="tabbed-content">
+<p>
+<div class="progress progress-100plus static blue">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label">100%</p>
+</div>
+</div>
+<div class="progress progress-80plus static lightcyan">
+<div class="progress-bar" style="width:85.00%">
+<p class="progress-label">85%</p>
+</div>
+</div>
+<div class="progress progress-100plus static darkcyan">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label">100%</p>
+</div>
+</div>
+<div class="progress progress-80plus static verydarkcyan">
+<div class="progress-bar" style="width:85.00%">
+<p class="progress-label">85%</p>
+</div>
+</div>
+<div class="progress progress-80plus static blueviolet">
+<div class="progress-bar" style="width:85.00%">
+<p class="progress-label">85%</p>
+</div>
+</div>
+<div class="progress progress-100plus static bisque">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label">100%</p>
+</div>
+</div>
+<div class="progress progress-80plus static green">
+<div class="progress-bar" style="width:85.00%">
+<p class="progress-label">85%</p>
+</div>
+</div>
+<div class="progress progress-80plus static darkgreen">
+<div class="progress-bar" style="width:85.00%">
+<p class="progress-label">85%</p>
+</div>
+</div>
+<div class="progress progress-100plus static orange">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label">100%</p>
+</div>
+</div>
+<div class="progress progress-80plus static orangered">
+<div class="progress-bar" style="width:85.00%">
+<p class="progress-label">85%</p>
+</div>
+</div>
+<div class="progress progress-100plus static olivedrab">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label">100%</p>
+</div>
+</div>
+<div class="progress progress-80plus static red">
+<div class="progress-bar" style="width:85.00%">
+<p class="progress-label">85%</p>
+</div>
+</div>
+<div class="progress progress-100plus static gray">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label">100%</p>
+</div>
+</div>
+<div class="progress progress-100plus static grey">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label">100%</p>
+</div>
+</div>
+</p>
+</div>
+<input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><label for="__tabbed_26_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>    [=100% &quot;100%&quot;]{: .static .blue}
+    [=85% &quot;85%&quot;]{: .static .lightcyan}
+    [=100% &quot;100%&quot;]{: .static .darkcyan}
+    [=85% &quot;85%&quot;]{: .static .verydarkcyan}
+    [=85% &quot;85%&quot;]{: .static .blueviolet}
+    [=100% &quot;100%&quot;]{: .static .bisque}
+    [=85% &quot;85%&quot;]{: .static .green}
+    [=85% &quot;85%&quot;]{: .static .darkgreen}
+    [=100% &quot;100%&quot;]{: .static .orange}
+    [=85% &quot;85%&quot;]{: .static .orangered}
+    [=100% &quot;100%&quot;]{: .static .olivedrab}
+    [=85% &quot;85%&quot;]{: .static .red}
+    [=100% &quot;100%&quot;]{: .static .gray}
+    [=100% &quot;100%&quot;]{: .static .grey}
+</code></pre></div>
+</div>
+</div>
+<h4 id="example-4">Example #4<a class="headerlink" href="#example-4" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><label for="__tabbed_27_1">Output</label><div class="tabbed-content">
+<p>
+<div class="progress progress-80plus candystripe">
+<div class="progress-bar" style="width:85.00%">
+<p class="progress-label">85%</p>
+</div>
+</div>
+<div class="progress progress-100plus candystripe candystripe-animate">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label">100%</p>
+</div>
+</div>
+</p>
+<p>
+<div class="progress progress-0plus thin">
+<div class="progress-bar" style="width:0.00%">
+<p class="progress-label"></p>
+</div>
+</div>
+<div class="progress progress-0plus thin">
+<div class="progress-bar" style="width:5.00%">
+<p class="progress-label"></p>
+</div>
+</div>
+<div class="progress progress-20plus thin">
+<div class="progress-bar" style="width:25.00%">
+<p class="progress-label"></p>
+</div>
+</div>
+<div class="progress progress-40plus thin">
+<div class="progress-bar" style="width:45.00%">
+<p class="progress-label"></p>
+</div>
+</div>
+<div class="progress progress-60plus thin">
+<div class="progress-bar" style="width:65.00%">
+<p class="progress-label"></p>
+</div>
+</div>
+<div class="progress progress-80plus thin">
+<div class="progress-bar" style="width:85.00%">
+<p class="progress-label"></p>
+</div>
+</div>
+<div class="progress progress-100plus thin">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label"></p>
+</div>
+</div>
+</p>
+</div>
+<input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><label for="__tabbed_27_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>   [=85% &quot;85%&quot;]{: .candystripe}
+   [=100% &quot;100%&quot;]{: .candystripe .candystripe-animate}
+
+   [=0%]{: .thin}
+   [=5%]{: .thin}
+   [=25%]{: .thin}
+   [=45%]{: .thin}
+   [=65%]{: .thin}
+   [=85%]{: .thin}
+   [=100%]{: .thin} 
+</code></pre></div>
+</div>
+</div>
+<h4 id="example-5">Example #5<a class="headerlink" href="#example-5" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="28:2"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><label for="__tabbed_28_1">Output</label><div class="tabbed-content">
+<p>
+<div class="progress progress-80plus static blue">
+<div class="progress-bar" style="width:91.00%">
+<p class="progress-label">Going good</p>
+</div>
+</div>
+<div class="progress progress-80plus static orange">
+<div class="progress-bar" style="width:85.00%">
+<p class="progress-label">In progress</p>
+</div>
+</div>
+<div class="progress progress-100plus static red">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label">Blocked</p>
+</div>
+</div>
+<div class="progress progress-100plus static grey">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label">Not Started</p>
+</div>
+</div>
+<div class="progress progress-100plus static darkgreen">
+<div class="progress-bar" style="width:100.00%">
+<p class="progress-label">Completed</p>
+</div>
+</div>
+</p>
+</div>
+<input id="__tabbed_28_2" name="__tabbed_28" type="radio" /><label for="__tabbed_28_2">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>   [=91% &quot;Going good&quot;]{: .static .blue}
+   [=85% &quot;In progress&quot;]{: .static .orange}
+   [=100% &quot;Blocked&quot;]{: .static .red}
+   [=100% &quot;Not Started&quot;]{: .static .grey}
+   [=100% &quot;Completed&quot;]{: .static .darkgreen}  
+</code></pre></div>
+</div>
+</div>
+<h2 id="3-references">3️⃣ References<a class="headerlink" href="#3-references" title="Permanent link">&para;</a></h2>
+<h3 id="markdown">Markdown 💪<a class="headerlink" href="#markdown" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Github Markdown</a></li>
+<li><a href="https://www.mkdocs.org/user-guide/writing-your-docs/" target="_blank">Mkdocs Writing your Docs</a></li>
+<li><a href="https://squidfunk.github.io/mkdocs-material/getting-started/" target="_blank">Material for MKDocs</a></li>
+<li><a href="https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/" target="_blank">pymdown-extensions</a></li>
+</ul>
+<h3 id="emojis">Emojis 😃<a class="headerlink" href="#emojis" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://emojipedia.org/nature/" target="_blank">Emojis</a></li>
+<li><a href="https://gist.github.com/rxaviers/7360908" target="_blank">Github Markup Emojis</a></li>
+<li><a href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md">emoji-cheat-sheet</a></li>
+<li><a href="http://www.i2symbol.com/symbols/style-digits">style-digits</a></li>
+</ul>
+<h3 id="badges">Badges 📛<a class="headerlink" href="#badges" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://shields.io/" target="_blank">Badges</a></li>
+</ul>
+<h3 id="drawings">Drawings ✒️<a class="headerlink" href="#drawings" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://mermaid-js.github.io/mermaid/#/flowchart" target="_blank">mermaid js</a></li>
+<li><a href="https://github.com/fralau/mkdocs-mermaid2-plugin" target="_blank">mermaid plugin</a></li>
+</ul>
+<h3 id="others">Others 📒<a class="headerlink" href="#others" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.markdownguide.org/tools/" target="_blank">Markdown Guide</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+  <footer class="md-footer">
+    
+      <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="document-as-code.html" title="Document As Code" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  Document As Code
+                </span>
+              </div>
+            </a>
+          
+          
+            <a href="creating-diagrams.html" title="Creating Diagrams" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  Creating Diagrams
+                </span>
+              </div>
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+              </div>
+            </a>
+          
+        </nav>
+      </div>
+        
+  </footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tables.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.8.3/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
